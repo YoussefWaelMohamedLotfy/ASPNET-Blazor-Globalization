@@ -1,14 +1,37 @@
 ﻿@inherits LayoutComponentBase
 
-<PageTitle>BlazorGlobalization</PageTitle>
+<PageTitle>Blazor Globalization</PageTitle>
 
-<div class="page">
-    <div class="sidebar">
+<div>
+@*    <div class="sidebar">
         <NavMenu />
+    </div>*@
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Blazor Server Globalization</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="list-group">
+            <NavLink class="list-group-item list-group-item-action" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+            <NavLink class="list-group-item list-group-item-action" href="counter">
+                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+            </NavLink>
+            <NavLink class="list-group-item list-group-item-action" href="fetchdata">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </NavLink>
+        </div>
+      </div>
     </div>
 
     <main>
-        <div class="top-row px-4">
+        <div class="top-row border-bottom align-baseline px-2 pt-2">
+            <a class="btn btn-primary @*d-lg-none*@" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i>
+            </a>
             <CultureDropdown></CultureDropdown>
         </div>
 
@@ -16,4 +39,22 @@
             @Body
         </article>
     </main>
+    <footer class="border-top footer text-muted bg-dark">
+        <div class="container">
+            <div class="row d-flex justify-content-evenly">
+                <div class="col-4 text-center text-white">Insert your logo here</div>
+                <div class="col-4 text-white">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms and Conditions</a>
+                    All rights reserved 2022
+                </div>
+                <div class="col-4 text-center text-white">
+                    <i class="bi bi-instagram" style="font-size: 2rem;"></i>
+                    <i class="bi bi-facebook mx-2" style="font-size: 2rem;"></i>
+                    <i class="bi bi-twitter" style="font-size: 2rem;"></i>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 </div>

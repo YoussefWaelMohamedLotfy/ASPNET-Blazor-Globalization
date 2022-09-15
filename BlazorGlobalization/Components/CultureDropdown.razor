@@ -2,7 +2,7 @@
 @inject NavigationManager Nav
 @inject IServiceProvider serviceProvider
 
-<label>
+<label class="align-baseline">
     Culture:
     <select @bind="Culture">
         @foreach (var culture in serviceProvider.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value.SupportedCultures!)
