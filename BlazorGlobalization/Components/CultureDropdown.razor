@@ -1,0 +1,37 @@
+﻿@using System.Globalization
+@inject NavigationManager Nav
+@inject IServiceProvider serviceProvider
+
+<label>
+    Culture:
+    <select @bind="Culture">
+        @foreach (var culture in serviceProvider.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value.SupportedCultures!)
+        {
+            <option value="@culture">@culture.NativeName</option>
+        }
+    </select>
+</label>
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        Culture = CultureInfo.CurrentCulture;
+    }
+
+    private CultureInfo Culture
+    {
+        get => CultureInfo.CurrentCulture;
+        set
+        {
+            if (CultureInfo.CurrentCulture != value)
+            {
+                var uri = new Uri(Nav.Uri).GetComponents(UriComponents.PathAndQuery, UriFormat.Unescaped);
+                var cultureEscaped = Uri.EscapeDataString(value.Name);
+                var uriEscaped = Uri.EscapeDataString(uri);
+
+                Nav.NavigateTo($"Culture/Set?culture={cultureEscaped}&redirectUri={uriEscaped}", forceLoad: true);
+            }
+        }
+    }
+}
