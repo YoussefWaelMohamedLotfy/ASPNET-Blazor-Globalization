@@ -1,5 +1,4 @@
 using BlazorGlobalization.Data;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 
