@@ -61,6 +61,15 @@ namespace BlazorServerGlobalization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click Me!.
+        /// </summary>
+        public static string ClickMe {
+            get {
+                return ResourceManager.GetString("ClickMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello World!.
         /// </summary>
         public static string helloworld {
