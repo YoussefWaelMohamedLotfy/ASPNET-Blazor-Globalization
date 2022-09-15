@@ -1,14 +1,28 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
+@using System.Globalization
 @namespace BlazorGlobalization.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
+@{
+    var currentCultureInfo = System.Globalization.CultureInfo.CurrentCulture;
+}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="@currentCultureInfo.TwoLetterISOLanguageName" dir="@(currentCultureInfo.TextInfo.IsRightToLeft ? "rtl" : "ltr")">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    @if (currentCultureInfo.TextInfo.IsRightToLeft)
+    {
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.rtl.min.css" integrity="sha384-OXTEbYDqaX2ZY/BOaZV/yFGChYHtrXH2nyXJ372n2Y8abBhrqacCEe+3qhSHtLjy" crossorigin="anonymous">
+    }
+    else
+    {
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    }
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="css/site.css" rel="stylesheet" />
     <link href="BlazorServerGlobalization.styles.css" rel="stylesheet" />

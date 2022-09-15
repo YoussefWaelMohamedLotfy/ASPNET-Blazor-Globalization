@@ -118,30 +118,30 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ClickMe" xml:space="preserve">
-    <value>Click Me!</value>
+    <value>انقر هنا!</value>
   </data>
   <data name="CultureLabel" xml:space="preserve">
-    <value>Culture:</value>
+    <value>اللغة:</value>
   </data>
   <data name="helloworld" xml:space="preserve">
-    <value>Hello World!</value>
+    <value>مرحبا بالعالم!</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>الرئيسية</value>
   </data>
   <data name="PrivacyPolicy" xml:space="preserve">
-    <value>Privacy Policy</value>
-  </data>
-  <data name="SeeMore" xml:space="preserve">
-    <value>See More</value>
+    <value>سياسة الخصوصية</value>
   </data>
   <data name="TermsAndConditions" xml:space="preserve">
-    <value>Terms and Conditions</value>
+    <value>الشروط و الأحكام</value>
   </data>
   <data name="ThankYouBrowser" xml:space="preserve">
-    <value>Thank you for using a Power-Saving Browser</value>
+    <value>شكرا لاستخدامكم متصفح موفر للطاقة</value>
   </data>
   <data name="welcome" xml:space="preserve">
-    <value>Welcome to the app!</value>
+    <value>مرحبا بكم في التطبيق!</value>
+  </data>
+  <data name="SeeMore" xml:space="preserve">
+    <value>المزيد</value>
   </data>
 </root>

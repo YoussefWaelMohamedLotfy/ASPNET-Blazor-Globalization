@@ -70,11 +70,65 @@ namespace BlazorServerGlobalization.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Culture:.
+        /// </summary>
+        public static string CultureLabel {
+            get {
+                return ResourceManager.GetString("CultureLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello World!.
         /// </summary>
         public static string helloworld {
             get {
                 return ResourceManager.GetString("helloworld", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Home.
+        /// </summary>
+        public static string Home {
+            get {
+                return ResourceManager.GetString("Home", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Privacy Policy.
+        /// </summary>
+        public static string PrivacyPolicy {
+            get {
+                return ResourceManager.GetString("PrivacyPolicy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to See More.
+        /// </summary>
+        public static string SeeMore {
+            get {
+                return ResourceManager.GetString("SeeMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Terms and Conditions.
+        /// </summary>
+        public static string TermsAndConditions {
+            get {
+                return ResourceManager.GetString("TermsAndConditions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thank you for using a Power-Saving Browser.
+        /// </summary>
+        public static string ThankYouBrowser {
+            get {
+                return ResourceManager.GetString("ThankYouBrowser", resourceCulture);
             }
         }
         
