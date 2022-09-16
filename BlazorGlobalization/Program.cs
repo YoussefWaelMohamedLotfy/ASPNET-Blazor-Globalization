@@ -1,4 +1,5 @@
 using BlazorGlobalization.Data;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using System.Globalization;
 
@@ -42,7 +43,18 @@ app.UseRouting();
 
 app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
-app.MapControllers();
+app.MapGet("Culture/Set", (string culture, string redirectUri, HttpContext context) =>
+{
+    if (culture is not null)
+    {
+        context.Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture, culture)),
+            new CookieOptions { Expires = DateTimeOffset.Now.AddDays(30) });
+    }
+
+    return Results.LocalRedirect(redirectUri);
+});
+
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 

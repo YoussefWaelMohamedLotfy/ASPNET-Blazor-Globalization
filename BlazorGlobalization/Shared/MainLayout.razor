@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject IStringLocalizer<Resource> localizer
 
 <PageTitle>Blazor Globalization</PageTitle>
 
@@ -11,7 +12,7 @@
       <div class="offcanvas-body">
         <div class="list-group">
             <NavLink class="list-group-item list-group-item-action" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
+                <span class="oi oi-home" aria-hidden="true"></span> @localizer["Home"]
             </NavLink>
             <NavLink class="list-group-item list-group-item-action" href="counter">
                 <span class="oi oi-plus" aria-hidden="true"></span> Counter
@@ -33,14 +34,14 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  <a class="nav-link active" aria-current="page" href="/">@localizer["Home"]</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link disabled">Disabled</a>
                 </li>
                 <li class="nav-item">
                   <a class="btn btn-primary nav-link @*d-lg-none*@" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                    <i class="bi bi-list">See More</i>
+                    <i class="bi bi-list">@localizer["SeeMore"]</i>
                   </a>
                 </li>
               </ul>
@@ -57,9 +58,9 @@
         <div class="container">
             <div class="row d-flex justify-content-evenly">
                 <div class="col-lg-4 col-sm-3 text-center text-white">Insert your logo here</div>
-                <div class="col-lg-4 col-sm-6 text-white">
-                    <a href="">Privacy Policy</a>
-                    <a href="">Terms and Conditions</a>
+                <div class="col-lg-4 col-sm-6 text-white text-wrap">
+                    <a href="">@localizer["PrivacyPolicy"]</a>
+                    <a href="">@localizer["TermsAndConditions"]</a>
                     All rights reserved 2022
                 </div>
                 <div class="col-lg-4 col-sm-3 text-center text-white">

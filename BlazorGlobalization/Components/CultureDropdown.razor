@@ -1,9 +1,10 @@
 ﻿@using System.Globalization
 @inject NavigationManager Nav
 @inject IServiceProvider serviceProvider
+@inject IStringLocalizer<Resource> localizer
 
 <label class="align-baseline">
-    Culture:
+    @localizer["CultureLabel"]
     <select @bind="Culture">
         @foreach (var culture in serviceProvider.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value.SupportedCultures!)
         {

@@ -117,10 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ClickMe" xml:space="preserve">
+    <value>¡Haz click en mi!</value>
+  </data>
+  <data name="CultureLabel" xml:space="preserve">
+    <value>Cultura:</value>
+  </data>
   <data name="helloworld" xml:space="preserve">
-    <value>Hola Mundo</value>
+    <value>Hola Mundo!</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Menú principal</value>
+  </data>
+  <data name="PrivacyPolicy" xml:space="preserve">
+    <value>Política de privacidad</value>
+  </data>
+  <data name="TermsAndConditions" xml:space="preserve">
+    <value>Términos y condiciones</value>
+  </data>
+  <data name="ThankYouBrowser" xml:space="preserve">
+    <value>Gracias por usar un navegador de ahorro de energía</value>
   </data>
   <data name="welcome" xml:space="preserve">
-    <value>Beneviendo</value>
+    <value>Beneviendo!</value>
+  </data>
+  <data name="SeeMore" xml:space="preserve">
+    <value>Ver más</value>
   </data>
 </root>
