@@ -94,7 +94,25 @@ Then use the `CultureDropDown` tag in your `MainLayout.razor` or wherever it sui
 
 > Don't forget to add any missing `using` statements or you will get Compilation Errors.
 
-5. Inject the `IStringLocalizer<Resource>` in your razor components and access a specific resource record using its Key Name that you specified in the resource file.
+5. Add a Minimal API Endpoint to add a Culture Cookie to store User's Culture preference and redirect to the same page that you were in.
+
+```c#
+app.MapGet("Culture/Set", (string culture, string redirectUri, HttpContext context) =>
+{
+    if (culture is not null)
+    {
+        context.Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
+            CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture, culture)),
+            new CookieOptions { Expires = DateTimeOffset.Now.AddDays(30) });
+    }
+
+    return Results.LocalRedirect(redirectUri);
+});
+```
+
+> Of course, you can change the route pattern to whatever you want.
+
+6. Inject the `IStringLocalizer<Resource>` in your razor components and access a specific resource record using its Key Name that you specified in the resource file.
 
 Index.razor:
 ```html
