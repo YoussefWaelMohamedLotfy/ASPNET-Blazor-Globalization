@@ -1,6 +1,7 @@
 # Blazor Globalization & Localization
 
-Demonstration of Supporting multiple cultures in Blazor Server App.
+Demonstration of Supporting multiple cultures in Blazor Server App.  
+Can be used as a Template.
 
 [See Micorsoft's Documentation for more info on Globalization in Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-6.0&pivots=server)
 
